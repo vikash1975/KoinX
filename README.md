@@ -1,16 +1,93 @@
-# React + Vite
+# KoinX Tax Loss Harvesting Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the Project
 
-Currently, two official plugins are available:
+This project is a simple implementation of a Tax Loss Harvesting tool using React.
+The goal was to build an interface where users can see their capital gains and update them by selecting different holdings.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The UI is inspired from the given Figma design and I tried to keep it as close as possible.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What I Built
 
-## Expanding the ESLint configuration
+* A dashboard with two sections:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  * Pre Harvesting
+  * After Harvesting
+* A table showing all holdings
+* Checkbox selection for each asset
+* Real-time update of gains when assets are selected
+* Tax saving message when applicable
+
+---
+
+## Tech Used
+
+* React.js
+* Tailwind CSS
+* JavaScript
+
+---
+
+## How it Works
+
+Initially, capital gains data is loaded from a mock API.
+
+When a user selects any asset:
+
+* If gain is positive → it is added to profits
+* If gain is negative → it is added to losses
+
+Based on this, updated gains are calculated and shown in the "After Harvesting" card.
+
+---
+
+## Setup Instructions
+
+1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/KoinX.git
+cd KoinX
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Run the project
+
+```bash
+npm start
+```
+
+---
+
+## Screenshots
+
+(Add screenshots here)
+
+---
+
+## Assumptions
+
+* Used mock data instead of real APIs
+* Values are rounded for display
+* Focus was mainly on logic and UI, not backend
+
+---
+
+## Things I Could Improve
+
+* Better UI polish to match Figma exactly
+* Add loading states
+* Improve mobile responsiveness
+
+---
+
+## Author
+
+Vikash Pal
